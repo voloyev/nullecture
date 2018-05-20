@@ -33,6 +33,7 @@ thats all
  ### MacOS:
  
  `$ brew install docker`
+
 ---
 
 # Create dockerfile
