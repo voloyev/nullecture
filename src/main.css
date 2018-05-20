@@ -1,0 +1,18 @@
+@import url(https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css);
+
+body {
+  font-family: 'Hack';
+}
+
+h1, h2, h3 {
+  font-family: 'Hack';
+  font-weight: normal;
+}
+
+.remark-code, .remark-inline-code {
+  font-family: 'Fira Code';
+  /* background-color: grey; */
+}
+.remark-code-line-highlighted {
+  background-color: rgba(255,255,0,0.3);
+}
