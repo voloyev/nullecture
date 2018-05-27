@@ -73,6 +73,7 @@ Go to https://rvm.io/rvm/install
 *** linux
 ~$ git clone https://github.com/rbenv/rbenv.git ~/.rbenv~
 
+
 ~$ cd ~/.rbenv && src/configure && make -C src~
 
 if bash
@@ -127,7 +128,9 @@ then
 OR just use rvm
 
 ~$ brew install rbenv~
+
 ~$ brew install ruby-build~
+
 ~$ brew upgrade rbenv ruby-build~
 
 * editors
