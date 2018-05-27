@@ -1,4 +1,6 @@
-* Agenda
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
+
+** Agenda
 bash, zsh, fish
 RVM
 RBENV
@@ -6,6 +8,34 @@ chruby
 what is bundle exec
 Docker, docker-compose, warm up project
 
+* unix shell
+** profile vs bashrc/zshrc
+.bash_profile and .bashrc are specific to bash, whereas .profile is read by many shells in the absence of their own shell-specific config files. (.profile was used by the original Bourne shell.) .bash_profile or .profile is read by login shells, along with .bashrc; subshells read only .bashrc. (Between job control and modern windowing systems, .bashrc by itself doesn't get used much. If you use screen or tmux, screens/windows usually run subshells instead of login shells.)
+
+The idea behind this was that one-time setup was done by .profile (or shell-specific version thereof), and per-shell stuff by .bashrc. For example, you generally only want to load environment variables once per session instead of getting them whacked any time you launch a subshell within a session, whereas you always want your aliases (which aren't propagated automatically like environment variables are).
+
+Other notable shell config files:
+
+/etc/bash_profile (fallback /etc/profile) is read before the user's .profile for system-wide configuration, and likewise /etc/bashrc in subshells (no fallback for this one). Many systems including Ubuntu also use an /etc/profile.d directory containing shell scriptlets, which are . (source)-ed from /etc/profile; the fragments here are per-shell, with *.sh applying to all Bourne/POSIX compatible shells and other extensions applying to that particular shell.
+** Second profile vs bashrc
+The main difference with shell config files is that some are only read by "login" shells (eg. when you login from another host, or login at the text console of a local unix machine). these are the ones called, say, .login or .profile or .zlogin (depending on which shell you're using).
+
+Then you have config files that are read by "interactive" shells (as in, ones connected to a terminal (or pseudo-terminal in the case of, say, a terminal emulator running under a windowing system). these are the ones with names like .bashrc, .tcshrc, .zshrc, etc.
+
+bash complicates this in that .bashrc is only read by a shell that's both interactive and non-login, so you'll find most people end up telling their .bash_profile to also read .bashrc with something like
+
+[[ -r ~/.bashrc ]] && . ~/.bashrc
+
+Other shells behave differently - eg with zsh, .zshrc is always read for an interactive shell, whether it's a login one or not.
+
+The manual page for bash explains the circumstances under which each file is read. Yes, behaviour is generally consistent between machines.
+
+.profile is simply the login script filename originally used by /bin/sh. bash, being generally backwards-compatible with /bin/sh, will read .profile if one exists
+** my bash setup
+https://github.com/voloyev/EmacsConfig/blob/master/.bashrc
+** my zsh setup
+https://github.com/voloyev/EmacsConfig/blob/master/.zshrc
+** fish
 * bundle exec
 bundle exec is a Bundler command to execute a script in the context of the current bundle (the one from your directory's Gemfile). rake db:migrate is the script where db is the namespace and migrate is the task name defined.
 So bundle exec rake db:migrate executes the rake script with the command db:migrate in the context of the current bundle.
@@ -20,4 +50,100 @@ And it makes it so when you require files the right file is loaded.
 * rvm, rbenv
 The two most popular Ruby version managers are RVM and rbenv (though I strongly recommend chruby). They work in totally different ways (RVM overwrites your cd shell builtin function!) but the output of all these tools is the same: They export environment variables so your Ruby code operates on a particular version of Ruby with a particular set of gems.
 Here’s a diff[1] of the environment when we’re using one version of Ruby versus another:
+** rvm
+*** linux
+Go to https://rvm.io/rvm/install
+
+=$ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB=
+
+~$ \curl -sSL https://get.rvm.io | bash~
+
+if gnome-terminal
+https://rvm.io/integration/gnome-terminal
+https://rvm.io/support/faq#shell_login
+
+*** macos
+Go to https://rvm.io/rvm/install
+
+=$ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB=
+
+~$ \curl -sSL https://get.rvm.io | bash~
+
+** rbenv
+*** linux
+~$ git clone https://github.com/rbenv/rbenv.git ~/.rbenv~
+
+~$ cd ~/.rbenv && src/configure && make -C src~
+
+if bash
+
+~$ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile~
+
+if ubuntu with bash
+
+~$ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc~
+
+if zsh
+
+~$ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc~
+
+then
+
+~$~/.rbenv/bin/rbenv init~
+
+then
+# As an rbenv plugin
+~$ mkdir -p "$(rbenv root)"/plugins~
+
+~$ git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build~
+
+** macos
+
+~$ git clone https://github.com/rbenv/rbenv.git ~/.rbenv~
+
+~$ cd ~/.rbenv && src/configure && make -C src~
+
+if bash
+
+~$ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile~
+
+if ubuntu with bash
+
+~$ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc~
+
+if zsh
+
+~$ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc~
+
+then
+
+~$~/.rbenv/bin/rbenv init~
+
+then
+# As an rbenv plugin
+~$ mkdir -p "$(rbenv root)"/plugins~
+~$ git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build~
+
+OR just use rvm
+
+~$ brew install rbenv~
+~$ brew install ruby-build~
+~$ brew upgrade rbenv ruby-build~
+
+* editors
+** vim
+https://github.com/voloyev/EmacsConfig/blob/master/.vimrc
+** emacs
+https://github.com/voloyev/EmacsConfig
+** others
+* git
+** difference from vcs, merccurial
+** pull-request
+* deploy
+** capistrano
+** ansible
+** chef 
+** cd/ci
+https://semaphoreci.com/blog/2017/07/27/what-is-the-difference-between-continuous-integration-continuous-deployment-and-continuous-delivery.html
+
 

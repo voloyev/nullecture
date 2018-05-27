@@ -2,7 +2,7 @@ class: center
 
 # Lecture 1
 # Setting up environment 
-
+## IDE, rvm/rbenv, bash/zsh, git, CI, deploy, pull requests
 ---
 
 myName: Volodya
