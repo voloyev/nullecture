@@ -121,8 +121,11 @@ then
 ~$~/.rbenv/bin/rbenv init~
 
 then
+
 # As an rbenv plugin
+
 ~$ mkdir -p "$(rbenv root)"/plugins~
+
 ~$ git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build~
 
 OR just use rvm
@@ -139,6 +142,12 @@ https://github.com/voloyev/EmacsConfig/blob/master/.vimrc
 ** emacs
 https://github.com/voloyev/EmacsConfig
 ** others
+*** vscode
+https://medium.com/@PaulWritesCode/ruby-on-rails-with-visual-studio-code-bc5681a2c098
+*** atom
+https://medium.com/@jamesbvsh/how-to-configure-atom-for-ror-development-241f54e76fbe
+*** sublime
+https://mattbrictson.com/sublime-text-3-recommendations
 * git
 ** difference from vcs, merccurial
 ** pull-request
