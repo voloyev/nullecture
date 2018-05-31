@@ -1,14 +1,14 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
 
-** Agenda
+* TODO Agenda
 bash, zsh, fish
+what is bundle exec
 RVM
 RBENV
 chruby
-what is bundle exec
 Docker, docker-compose, warm up project
 
-* unix shell
+* TODO unix shell
 ** profile vs bashrc/zshrc
 .bash_profile and .bashrc are specific to bash, whereas .profile is read by many shells in the absence of their own shell-specific config files. (.profile was used by the original Bourne shell.) .bash_profile or .profile is read by login shells, along with .bashrc; subshells read only .bashrc. (Between job control and modern windowing systems, .bashrc by itself doesn't get used much. If you use screen or tmux, screens/windows usually run subshells instead of login shells.)
 
@@ -36,7 +36,7 @@ https://github.com/voloyev/EmacsConfig/blob/master/.bashrc
 ** my zsh setup
 https://github.com/voloyev/EmacsConfig/blob/master/.zshrc
 ** fish
-* bundle exec
+* TODO bundle exec
 bundle exec is a Bundler command to execute a script in the context of the current bundle (the one from your directory's Gemfile). rake db:migrate is the script where db is the namespace and migrate is the task name defined.
 So bundle exec rake db:migrate executes the rake script with the command db:migrate in the context of the current bundle.
 As to the "why?" I'll quote from the bundler page:
@@ -47,7 +47,7 @@ It does a topological sort of the gems listed in your Gemfile to print a complet
 It retrieves the gems your project needs from the source(s) you’ve defined
 And it makes it so when you require files the right file is loaded.
 
-* rvm, rbenv
+* TODO rvm, rbenv
 The two most popular Ruby version managers are RVM and rbenv (though I strongly recommend chruby). They work in totally different ways (RVM overwrites your cd shell builtin function!) but the output of all these tools is the same: They export environment variables so your Ruby code operates on a particular version of Ruby with a particular set of gems.
 Here’s a diff[1] of the environment when we’re using one version of Ruby versus another:
 ** rvm
@@ -136,7 +136,7 @@ OR just use rvm
 
 ~$ brew upgrade rbenv ruby-build~
 
-* editors
+* TODO editors
 ** vim
 https://github.com/voloyev/EmacsConfig/blob/master/.vimrc
 ** emacs
@@ -147,15 +147,18 @@ https://medium.com/@PaulWritesCode/ruby-on-rails-with-visual-studio-code-bc5681a
 *** atom
 https://medium.com/@jamesbvsh/how-to-configure-atom-for-ror-development-241f54e76fbe
 *** sublime
-https://mattbrictson.com/sublime-text-3-recommendations
-* git
+    https://mattbrictson.com/sublime-text-3-recommendations
+* TODO git
 ** difference from vcs, merccurial
 ** pull-request
-* deploy
+https://githowto.com
+https://robots.thoughtbot.com/git-interactive-rebase-squash-amend-rewriting-history
+https://www.atlassian.com/git/tutorials
+*** rebase
+https://www.atlassian.com/git/tutorials/merging-vs-rebasing
+* TODO deploy
 ** capistrano
 ** ansible
 ** chef 
 ** cd/ci
 https://semaphoreci.com/blog/2017/07/27/what-is-the-difference-between-continuous-integration-continuous-deployment-and-continuous-delivery.html
-
-

@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>TODO</title>
-<!-- 2018-05-27 нд 23:07 -->
+<!-- 2018-05-30 ср 22:28 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="voloyev" />
@@ -143,67 +143,67 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-0-1">0.1. Agenda</a></li>
+<li><a href="#sec-1">1. Agenda</a></li>
+<li><a href="#sec-2">2. unix shell</a>
+<ul>
+<li><a href="#sec-2-1">2.1. profile vs bashrc/zshrc</a></li>
+<li><a href="#sec-2-2">2.2. Second profile vs bashrc</a></li>
+<li><a href="#sec-2-3">2.3. my bash setup</a></li>
+<li><a href="#sec-2-4">2.4. my zsh setup</a></li>
+<li><a href="#sec-2-5">2.5. fish</a></li>
 </ul>
 </li>
-<li><a href="#sec-1">1. unix shell</a>
+<li><a href="#sec-3">3. bundle exec</a></li>
+<li><a href="#sec-4">4. rvm, rbenv</a>
 <ul>
-<li><a href="#sec-1-1">1.1. profile vs bashrc/zshrc</a></li>
-<li><a href="#sec-1-2">1.2. Second profile vs bashrc</a></li>
-<li><a href="#sec-1-3">1.3. my bash setup</a></li>
-<li><a href="#sec-1-4">1.4. my zsh setup</a></li>
-<li><a href="#sec-1-5">1.5. fish</a></li>
+<li><a href="#sec-4-1">4.1. rvm</a>
+<ul>
+<li><a href="#sec-4-1-1">4.1.1. linux</a></li>
+<li><a href="#sec-4-1-2">4.1.2. macos</a></li>
 </ul>
 </li>
-<li><a href="#sec-2">2. bundle exec</a></li>
-<li><a href="#sec-3">3. rvm, rbenv</a>
+<li><a href="#sec-4-2">4.2. rbenv</a>
 <ul>
-<li><a href="#sec-3-1">3.1. rvm</a>
-<ul>
-<li><a href="#sec-3-1-1">3.1.1. linux</a></li>
-<li><a href="#sec-3-1-2">3.1.2. macos</a></li>
+<li><a href="#sec-4-2-1">4.2.1. linux</a></li>
 </ul>
 </li>
-<li><a href="#sec-3-2">3.2. rbenv</a>
-<ul>
-<li><a href="#sec-3-2-1">3.2.1. linux</a></li>
+<li><a href="#sec-4-3">4.3. macos</a></li>
 </ul>
 </li>
-<li><a href="#sec-3-3">3.3. macos</a></li>
-</ul>
-</li>
-<li><a href="#sec-4">4. editors</a>
+<li><a href="#sec-5">5. editors</a>
 <ul>
-<li><a href="#sec-4-1">4.1. vim</a></li>
-<li><a href="#sec-4-2">4.2. emacs</a></li>
-<li><a href="#sec-4-3">4.3. others</a>
+<li><a href="#sec-5-1">5.1. vim</a></li>
+<li><a href="#sec-5-2">5.2. emacs</a></li>
+<li><a href="#sec-5-3">5.3. others</a>
 <ul>
-<li><a href="#sec-4-3-1">4.3.1. vscode</a></li>
-<li><a href="#sec-4-3-2">4.3.2. atom</a></li>
-<li><a href="#sec-4-3-3">4.3.3. sublime</a></li>
+<li><a href="#sec-5-3-1">5.3.1. vscode</a></li>
+<li><a href="#sec-5-3-2">5.3.2. atom</a></li>
+<li><a href="#sec-5-3-3">5.3.3. sublime</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#sec-5">5. git</a>
+<li><a href="#sec-6">6. git</a>
 <ul>
-<li><a href="#sec-5-1">5.1. difference from vcs, merccurial</a></li>
-<li><a href="#sec-5-2">5.2. pull-request</a></li>
+<li><a href="#sec-6-1">6.1. difference from vcs, merccurial</a></li>
+<li><a href="#sec-6-2">6.2. pull-request</a></li>
 </ul>
 </li>
-<li><a href="#sec-6">6. deploy</a>
+<li><a href="#sec-7">7. deploy</a>
 <ul>
-<li><a href="#sec-6-1">6.1. capistrano</a></li>
-<li><a href="#sec-6-2">6.2. ansible</a></li>
-<li><a href="#sec-6-3">6.3. chef</a></li>
-<li><a href="#sec-6-4">6.4. cd/ci</a></li>
+<li><a href="#sec-7-1">7.1. capistrano</a></li>
+<li><a href="#sec-7-2">7.2. ansible</a></li>
+<li><a href="#sec-7-3">7.3. chef</a></li>
+<li><a href="#sec-7-4">7.4. cd/ci</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-0-1" class="outline-3">
-<h3 id="sec-0-1"><span class="section-number-3">0.1</span> Agenda</h3>
-<div class="outline-text-3" id="text-0-1">
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Agenda</h2>
+<div class="outline-text-2" id="text-1">
 <p>
 bash, zsh, fish
 RVM
@@ -215,12 +215,12 @@ Docker, docker-compose, warm up project
 </div>
 </div>
 
-<div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> unix shell</h2>
-<div class="outline-text-2" id="text-1">
-</div><div id="outline-container-sec-1-1" class="outline-3">
-<h3 id="sec-1-1"><span class="section-number-3">1.1</span> profile vs bashrc/zshrc</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> unix shell</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> profile vs bashrc/zshrc</h3>
+<div class="outline-text-3" id="text-2-1">
 <p>
 .bash<sub>profile</sub> and .bashrc are specific to bash, whereas .profile is read by many shells in the absence of their own shell-specific config files. (.profile was used by the original Bourne shell.) .bash<sub>profile</sub> or .profile is read by login shells, along with .bashrc; subshells read only .bashrc. (Between job control and modern windowing systems, .bashrc by itself doesn't get used much. If you use screen or tmux, screens/windows usually run subshells instead of login shells.)
 </p>
@@ -238,9 +238,9 @@ Other notable shell config files:
 </p>
 </div>
 </div>
-<div id="outline-container-sec-1-2" class="outline-3">
-<h3 id="sec-1-2"><span class="section-number-3">1.2</span> Second profile vs bashrc</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> Second profile vs bashrc</h3>
+<div class="outline-text-3" id="text-2-2">
 <p>
 The main difference with shell config files is that some are only read by "login" shells (eg. when you login from another host, or login at the text console of a local unix machine). these are the ones called, say, .login or .profile or .zlogin (depending on which shell you're using).
 </p>
@@ -270,29 +270,29 @@ The manual page for bash explains the circumstances under which each file is rea
 </p>
 </div>
 </div>
-<div id="outline-container-sec-1-3" class="outline-3">
-<h3 id="sec-1-3"><span class="section-number-3">1.3</span> my bash setup</h3>
-<div class="outline-text-3" id="text-1-3">
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> my bash setup</h3>
+<div class="outline-text-3" id="text-2-3">
 <p>
 <a href="https://github.com/voloyev/EmacsConfig/blob/master/.bashrc">https://github.com/voloyev/EmacsConfig/blob/master/.bashrc</a>
 </p>
 </div>
 </div>
-<div id="outline-container-sec-1-4" class="outline-3">
-<h3 id="sec-1-4"><span class="section-number-3">1.4</span> my zsh setup</h3>
-<div class="outline-text-3" id="text-1-4">
+<div id="outline-container-sec-2-4" class="outline-3">
+<h3 id="sec-2-4"><span class="section-number-3">2.4</span> my zsh setup</h3>
+<div class="outline-text-3" id="text-2-4">
 <p>
 <a href="https://github.com/voloyev/EmacsConfig/blob/master/.zshrc">https://github.com/voloyev/EmacsConfig/blob/master/.zshrc</a>
 </p>
 </div>
 </div>
-<div id="outline-container-sec-1-5" class="outline-3">
-<h3 id="sec-1-5"><span class="section-number-3">1.5</span> fish</h3>
+<div id="outline-container-sec-2-5" class="outline-3">
+<h3 id="sec-2-5"><span class="section-number-3">2.5</span> fish</h3>
 </div>
 </div>
-<div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2"><span class="section-number-2">2</span> bundle exec</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> bundle exec</h2>
+<div class="outline-text-2" id="text-3">
 <p>
 bundle exec is a Bundler command to execute a script in the context of the current bundle (the one from your directory's Gemfile). rake db:migrate is the script where db is the namespace and migrate is the task name defined.
 So bundle exec rake db:migrate executes the rake script with the command db:migrate in the context of the current bundle.
@@ -307,20 +307,20 @@ And it makes it so when you require files the right file is loaded.
 </div>
 </div>
 
-<div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3"><span class="section-number-2">3</span> rvm, rbenv</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> rvm, rbenv</h2>
+<div class="outline-text-2" id="text-4">
 <p>
 The two most popular Ruby version managers are RVM and rbenv (though I strongly recommend chruby). They work in totally different ways (RVM overwrites your cd shell builtin function!) but the output of all these tools is the same: They export environment variables so your Ruby code operates on a particular version of Ruby with a particular set of gems.
 Here’s a diff<sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup> of the environment when we’re using one version of Ruby versus another:
 </p>
 </div>
-<div id="outline-container-sec-3-1" class="outline-3">
-<h3 id="sec-3-1"><span class="section-number-3">3.1</span> rvm</h3>
-<div class="outline-text-3" id="text-3-1">
-</div><div id="outline-container-sec-3-1-1" class="outline-4">
-<h4 id="sec-3-1-1"><span class="section-number-4">3.1.1</span> linux</h4>
-<div class="outline-text-4" id="text-3-1-1">
+<div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> rvm</h3>
+<div class="outline-text-3" id="text-4-1">
+</div><div id="outline-container-sec-4-1-1" class="outline-4">
+<h4 id="sec-4-1-1"><span class="section-number-4">4.1.1</span> linux</h4>
+<div class="outline-text-4" id="text-4-1-1">
 <p>
 Go to <a href="https://rvm.io/rvm/install">https://rvm.io/rvm/install</a>
 </p>
@@ -341,9 +341,9 @@ if gnome-terminal
 </div>
 </div>
 
-<div id="outline-container-sec-3-1-2" class="outline-4">
-<h4 id="sec-3-1-2"><span class="section-number-4">3.1.2</span> macos</h4>
-<div class="outline-text-4" id="text-3-1-2">
+<div id="outline-container-sec-4-1-2" class="outline-4">
+<h4 id="sec-4-1-2"><span class="section-number-4">4.1.2</span> macos</h4>
+<div class="outline-text-4" id="text-4-1-2">
 <p>
 Go to <a href="https://rvm.io/rvm/install">https://rvm.io/rvm/install</a>
 </p>
@@ -359,12 +359,12 @@ Go to <a href="https://rvm.io/rvm/install">https://rvm.io/rvm/install</a>
 </div>
 </div>
 
-<div id="outline-container-sec-3-2" class="outline-3">
-<h3 id="sec-3-2"><span class="section-number-3">3.2</span> rbenv</h3>
-<div class="outline-text-3" id="text-3-2">
-</div><div id="outline-container-sec-3-2-1" class="outline-4">
-<h4 id="sec-3-2-1"><span class="section-number-4">3.2.1</span> linux</h4>
-<div class="outline-text-4" id="text-3-2-1">
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> rbenv</h3>
+<div class="outline-text-3" id="text-4-2">
+</div><div id="outline-container-sec-4-2-1" class="outline-4">
+<h4 id="sec-4-2-1"><span class="section-number-4">4.2.1</span> linux</h4>
+<div class="outline-text-4" id="text-4-2-1">
 <p>
 <code>$ git clone https://github.com/rbenv/rbenv.git ~/.rbenv</code>
 </p>
@@ -420,9 +420,9 @@ then
 </div>
 </div>
 
-<div id="outline-container-sec-3-3" class="outline-3">
-<h3 id="sec-3-3"><span class="section-number-3">3.3</span> macos</h3>
-<div class="outline-text-3" id="text-3-3">
+<div id="outline-container-sec-4-3" class="outline-3">
+<h3 id="sec-4-3"><span class="section-number-3">4.3</span> macos</h3>
+<div class="outline-text-3" id="text-4-3">
 <p>
 <code>$ git clone https://github.com/rbenv/rbenv.git ~/.rbenv</code>
 </p>
@@ -494,47 +494,47 @@ OR just use rvm
 </div>
 </div>
 
-<div id="outline-container-sec-4" class="outline-2">
-<h2 id="sec-4"><span class="section-number-2">4</span> editors</h2>
-<div class="outline-text-2" id="text-4">
-</div><div id="outline-container-sec-4-1" class="outline-3">
-<h3 id="sec-4-1"><span class="section-number-3">4.1</span> vim</h3>
-<div class="outline-text-3" id="text-4-1">
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> editors</h2>
+<div class="outline-text-2" id="text-5">
+</div><div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> vim</h3>
+<div class="outline-text-3" id="text-5-1">
 <p>
 <a href="https://github.com/voloyev/EmacsConfig/blob/master/.vimrc">https://github.com/voloyev/EmacsConfig/blob/master/.vimrc</a>
 </p>
 </div>
 </div>
-<div id="outline-container-sec-4-2" class="outline-3">
-<h3 id="sec-4-2"><span class="section-number-3">4.2</span> emacs</h3>
-<div class="outline-text-3" id="text-4-2">
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> emacs</h3>
+<div class="outline-text-3" id="text-5-2">
 <p>
 <a href="https://github.com/voloyev/EmacsConfig">https://github.com/voloyev/EmacsConfig</a>
 </p>
 </div>
 </div>
-<div id="outline-container-sec-4-3" class="outline-3">
-<h3 id="sec-4-3"><span class="section-number-3">4.3</span> others</h3>
-<div class="outline-text-3" id="text-4-3">
-</div><div id="outline-container-sec-4-3-1" class="outline-4">
-<h4 id="sec-4-3-1"><span class="section-number-4">4.3.1</span> vscode</h4>
-<div class="outline-text-4" id="text-4-3-1">
+<div id="outline-container-sec-5-3" class="outline-3">
+<h3 id="sec-5-3"><span class="section-number-3">5.3</span> others</h3>
+<div class="outline-text-3" id="text-5-3">
+</div><div id="outline-container-sec-5-3-1" class="outline-4">
+<h4 id="sec-5-3-1"><span class="section-number-4">5.3.1</span> vscode</h4>
+<div class="outline-text-4" id="text-5-3-1">
 <p>
 <a href="https://medium.com/@PaulWritesCode/ruby-on-rails-with-visual-studio-code-bc5681a2c098">https://medium.com/@PaulWritesCode/ruby-on-rails-with-visual-studio-code-bc5681a2c098</a>
 </p>
 </div>
 </div>
-<div id="outline-container-sec-4-3-2" class="outline-4">
-<h4 id="sec-4-3-2"><span class="section-number-4">4.3.2</span> atom</h4>
-<div class="outline-text-4" id="text-4-3-2">
+<div id="outline-container-sec-5-3-2" class="outline-4">
+<h4 id="sec-5-3-2"><span class="section-number-4">5.3.2</span> atom</h4>
+<div class="outline-text-4" id="text-5-3-2">
 <p>
 <a href="https://medium.com/@jamesbvsh/how-to-configure-atom-for-ror-development-241f54e76fbe">https://medium.com/@jamesbvsh/how-to-configure-atom-for-ror-development-241f54e76fbe</a>
 </p>
 </div>
 </div>
-<div id="outline-container-sec-4-3-3" class="outline-4">
-<h4 id="sec-4-3-3"><span class="section-number-4">4.3.3</span> sublime</h4>
-<div class="outline-text-4" id="text-4-3-3">
+<div id="outline-container-sec-5-3-3" class="outline-4">
+<h4 id="sec-5-3-3"><span class="section-number-4">5.3.3</span> sublime</h4>
+<div class="outline-text-4" id="text-5-3-3">
 <p>
 <a href="https://mattbrictson.com/sublime-text-3-recommendations">https://mattbrictson.com/sublime-text-3-recommendations</a>
 </p>
@@ -542,31 +542,38 @@ OR just use rvm
 </div>
 </div>
 </div>
-<div id="outline-container-sec-5" class="outline-2">
-<h2 id="sec-5"><span class="section-number-2">5</span> git</h2>
-<div class="outline-text-2" id="text-5">
-</div><div id="outline-container-sec-5-1" class="outline-3">
-<h3 id="sec-5-1"><span class="section-number-3">5.1</span> difference from vcs, merccurial</h3>
-</div>
-<div id="outline-container-sec-5-2" class="outline-3">
-<h3 id="sec-5-2"><span class="section-number-3">5.2</span> pull-request</h3>
-</div>
-</div>
 <div id="outline-container-sec-6" class="outline-2">
-<h2 id="sec-6"><span class="section-number-2">6</span> deploy</h2>
+<h2 id="sec-6"><span class="section-number-2">6</span> git</h2>
 <div class="outline-text-2" id="text-6">
 </div><div id="outline-container-sec-6-1" class="outline-3">
-<h3 id="sec-6-1"><span class="section-number-3">6.1</span> capistrano</h3>
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> difference from vcs, merccurial</h3>
 </div>
 <div id="outline-container-sec-6-2" class="outline-3">
-<h3 id="sec-6-2"><span class="section-number-3">6.2</span> ansible</h3>
+<h3 id="sec-6-2"><span class="section-number-3">6.2</span> pull-request</h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+<a href="https://githowto.com">https://githowto.com</a>
+<a href="https://robots.thoughtbot.com/git-interactive-rebase-squash-amend-rewriting-history">https://robots.thoughtbot.com/git-interactive-rebase-squash-amend-rewriting-history</a>
+<a href="https://www.atlassian.com/git/tutorials">https://www.atlassian.com/git/tutorials</a>
+</p>
 </div>
-<div id="outline-container-sec-6-3" class="outline-3">
-<h3 id="sec-6-3"><span class="section-number-3">6.3</span> chef</h3>
 </div>
-<div id="outline-container-sec-6-4" class="outline-3">
-<h3 id="sec-6-4"><span class="section-number-3">6.4</span> cd/ci</h3>
-<div class="outline-text-3" id="text-6-4">
+</div>
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> deploy</h2>
+<div class="outline-text-2" id="text-7">
+</div><div id="outline-container-sec-7-1" class="outline-3">
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> capistrano</h3>
+</div>
+<div id="outline-container-sec-7-2" class="outline-3">
+<h3 id="sec-7-2"><span class="section-number-3">7.2</span> ansible</h3>
+</div>
+<div id="outline-container-sec-7-3" class="outline-3">
+<h3 id="sec-7-3"><span class="section-number-3">7.3</span> chef</h3>
+</div>
+<div id="outline-container-sec-7-4" class="outline-3">
+<h3 id="sec-7-4"><span class="section-number-3">7.4</span> cd/ci</h3>
+<div class="outline-text-3" id="text-7-4">
 <p>
 <a href="https://semaphoreci.com/blog/2017/07/27/what-is-the-difference-between-continuous-integration-continuous-deployment-and-continuous-delivery.html">https://semaphoreci.com/blog/2017/07/27/what-is-the-difference-between-continuous-integration-continuous-deployment-and-continuous-delivery.html</a>
 </p>
@@ -584,7 +591,7 @@ OR just use rvm
 </div></div>
 <div id="postamble" class="status">
 <p class="author">Author: voloyev</p>
-<p class="date">Created: 2018-05-27 нд 23:07</p>
+<p class="date">Created: 2018-05-30 ср 22:28</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
