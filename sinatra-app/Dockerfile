@@ -3,7 +3,6 @@
 FROM ruby:2.5.1
 
 # install programs and libs
-RUN apt update && apt install sqlite -qq -y
 RUN mkdir /app
 WORKDIR /app
 COPY . .
